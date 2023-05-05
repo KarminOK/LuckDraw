@@ -1,10 +1,11 @@
 package com.example.lottery;
 
 import android.content.Context;
-import android.support.annotation.Nullable;
 import android.util.AttributeSet;
 import android.view.View;
 import android.widget.FrameLayout;
+
+import androidx.annotation.Nullable;
 
 
 public class PanelItemView extends FrameLayout implements ItemView{

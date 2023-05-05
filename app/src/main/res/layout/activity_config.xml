@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/lotterybg"
+    tools:ignore="MissingClass"
+    android:orientation="vertical">
+    <!-- 标题配置框 -->
+    <EditText
+        android:id="@+id/title_edittext"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Wheel of Fortune"
+        android:inputType="text"
+        android:imeOptions="actionDone"
+        android:imeActionLabel="Done"
+        android:singleLine="true"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        android:layout_marginTop="91dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:textColor="#E6E2DF"
+        android:textSize="31sp"/>
+    <!-- 图片缩略图 -->
+    <ImageView
+        android:id="@+id/lotterybg_imageview"
+        android:layout_width="142dp"
+        android:layout_height="139dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="16dp"
+        android:onClick="onImageSelected"
+        android:padding="16dp"
+        android:src="@drawable/lotterybg"
+        app:layout_constraintBottom_toTopOf="@id/image_c_imageview"
+        app:layout_constraintEnd_toStartOf="@id/image_b_imageview"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/title_edittext"
+        app:layout_constraintVertical_bias="0.5"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="8dp" />
+
+    <ImageView
+        android:id="@+id/image_b_imageview"
+        android:layout_width="148dp"
+        android:layout_height="139dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:onClick="onImageSelected"
+        android:padding="16dp"
+        android:src="@drawable/image_b"
+        app:layout_constraintBottom_toTopOf="@id/image_d_imageview"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@id/lotterybg_imageview"
+        app:layout_constraintTop_toBottomOf="@id/title_edittext"
+        app:layout_constraintVertical_bias="0.5" />
+
+    <ImageView
+        android:id="@+id/image_c_imageview"
+        android:layout_width="150dp"
+        android:layout_height="139dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="16dp"
+        android:onClick="onImageSelected"
+        android:padding="16dp"
+        android:src="@drawable/image_c"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/image_d_imageview"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/lotterybg_imageview"
+        app:layout_constraintVertical_bias="0.5" />
+
+    <ImageView
+        android:id="@+id/image_d_imageview"
+        android:layout_width="146dp"
+        android:layout_height="139dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:onClick="onImageSelected"
+        android:padding="16dp"
+        android:src="@drawable/image_d"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@id/image_c_imageview"
+        app:layout_constraintTop_toBottomOf="@id/image_b_imageview"
+        app:layout_constraintVertical_bias="0.5" />
+
+
+    <Button
+        android:id="@+id/btn_action"
+        android:layout_width="82dp"
+        android:layout_height="82dp"
+        android:layout_centerInParent="true"
+        android:background="@drawable/bg_lottery_go"
+        android:text="Go"
+        android:textColor="#4d1c01"
+        android:textSize="34sp"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="164dp"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginBottom="32dp"
+        />
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+
+

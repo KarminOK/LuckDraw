@@ -1,20 +1,17 @@
 package com.example.lottery;
 
 import android.content.Intent;
-import android.graphics.Color;
-import android.os.Handler;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.text.method.ScrollingMovementMethod;
-import android.util.Log;
+import android.os.Handler;
 import android.util.Pair;
-import android.view.Gravity;
 import android.view.View;
 import android.widget.Button;
+import android.widget.FrameLayout;
 import android.widget.ScrollView;
-import android.widget.Scroller;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -27,11 +24,16 @@ public class MainActivity extends AppCompatActivity {
     private Button btn_action;
     private Button btn_people;
     private Button btn_prize;
+
+    private Button btn_theme;
     private TextView textView;
     private ScrollView scrollView;
 
     public static List<String> people = new ArrayList<>();
     public static List<Pair<String, Integer>> prize = new ArrayList<>();
+    private static TextView titleEditText;
+    private static FrameLayout frameLayout;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -41,8 +43,12 @@ public class MainActivity extends AppCompatActivity {
         btn_action = (Button) findViewById(R.id.btn_action);
         btn_people = (Button) findViewById(R.id.btn_people);
         btn_prize = (Button) findViewById(R.id.btn_prize);
+        btn_theme = (Button) findViewById(R.id.btn_theme);
         textView = (TextView) findViewById(R.id.scrolling_text);
         scrollView = (ScrollView) findViewById(R.id.scrolling_view);
+
+        titleEditText = findViewById(R.id.title_edittext);
+        frameLayout = findViewById(R.id.frameLayout);
 
 //        textView.setMovementMethod(new ScrollingMovementMethod());
 
@@ -88,6 +94,14 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+        btn_theme.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, ConfigActivity.class);
+                startActivity(intent);
+            }
+        });
     }
 
     private void loop() {
@@ -123,5 +137,11 @@ public class MainActivity extends AppCompatActivity {
             }
         };
         handler.postDelayed(runnable, 3000);
+    }
+    public static void setTitleEditText(String title) {
+        titleEditText.setText(title);
+    }
+    public static void setBgImage(int resId) {
+        frameLayout.setBackgroundResource(resId);
     }
 }
