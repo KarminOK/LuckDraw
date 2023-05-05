@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/lotterybg">
+
+    <LinearLayout
+        android:id="@+id/view_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="45dp"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        android:overScrollMode="never">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/lottery_title"
+            android:textColor="@android:color/white"
+            android:textSize="30sp" />
+
+        <EditText
+            android:id="@+id/editText"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:inputType="textMultiLine"
+            android:hint="plase input member list like\ngengxin\nqiyun"/>
+
+        <Button
+            android:id="@+id/btn_action"
+            android:layout_width="82dp"
+            android:layout_height="82dp"
+            android:layout_marginTop="20dp"
+            android:layout_centerInParent="true"
+            android:background="@drawable/bg_lottery_go"
+            android:text="Go"
+            android:textColor="#4d1c01"
+            android:textSize="34sp" />
+
+
+    </LinearLayout>
+</FrameLayout>

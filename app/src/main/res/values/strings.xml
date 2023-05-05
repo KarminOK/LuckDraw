@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Lottery</string>
+
+
+    <string name="lottery_title">Wheel of Fortune</string>
+    <string name="lottery_times_left">times left</string>
+    <string name="lottery_fortune_list">Check out your fortune list</string>
+</resources>
