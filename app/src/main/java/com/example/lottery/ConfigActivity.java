@@ -20,6 +20,7 @@ import java.util.Arrays;
 public class ConfigActivity extends AppCompatActivity {
     private EditText titleEditText;
     private ImageView lotteryBgImageView, imageBImageView, imageCImageView, imageDImageView;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -31,63 +32,89 @@ public class ConfigActivity extends AppCompatActivity {
         imageBImageView = findViewById(R.id.image_b_imageview);
         imageCImageView = findViewById(R.id.image_c_imageview);
         imageDImageView = findViewById(R.id.image_d_imageview);
+
         Button btnAction = findViewById(R.id.btn_action);
         final int[] i = {1};
         lotteryBgImageView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                i[0] =1;
+                i[0] = 1;
+                onImageClick(v);
             }
         });
         imageBImageView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
-                i[0] =2;
+                i[0] = 2;
+                onImageClick(v);
             }
         });
         imageCImageView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
-                i[0] =3;
+                i[0] = 3;
+                onImageClick(v);
             }
         });
         imageDImageView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
-                i[0] =4;
+                i[0] = 4;
+                onImageClick(v);
             }
         });
 
         btnAction.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String vt=titleEditText.getText().toString();
-                if(vt!=null && vt.length()>0)
-                {
+                String vt = titleEditText.getText().toString();
+                if (vt != null && vt.length() > 0) {
                     MainActivity.setTitleEditText(titleEditText.getText().toString());
                 }
-                if(i[0]==1)
-                {
+                if (i[0] == 1) {
                     MainActivity.setBgImage(R.drawable.lotterybg);
-                }
-                else  if(i[0]==2)
-                {
+                } else if (i[0] == 2) {
                     MainActivity.setBgImage(R.drawable.image_b);
-                }
-                else  if(i[0]==3)
-                {
+                } else if (i[0] == 3) {
                     MainActivity.setBgImage(R.drawable.image_c);
-                }
-                else  if(i[0]==4)
-                {
+                } else if (i[0] == 4) {
                     MainActivity.setBgImage(R.drawable.image_d);
                 }
                 finish();
             }
         });
+    }
+
+    public void onImageClick(View v) {
+        switch (v.getId()) {
+            case R.id.lotterybg_imageview:
+                lotteryBgImageView.setBackgroundResource(R.drawable.image_bg_yellow);
+                imageBImageView.setBackgroundResource(R.drawable.image_bg);
+                imageCImageView.setBackgroundResource(R.drawable.image_bg);
+                imageDImageView.setBackgroundResource(R.drawable.image_bg);
+                break;
+            case R.id.image_b_imageview:
+                lotteryBgImageView.setBackgroundResource(R.drawable.image_bg);
+                imageBImageView.setBackgroundResource(R.drawable.image_bg_yellow);
+                imageCImageView.setBackgroundResource(R.drawable.image_bg);
+                imageDImageView.setBackgroundResource(R.drawable.image_bg);
+                break;
+            case R.id.image_c_imageview:
+                lotteryBgImageView.setBackgroundResource(R.drawable.image_bg);
+                imageBImageView.setBackgroundResource(R.drawable.image_bg);
+                imageCImageView.setBackgroundResource(R.drawable.image_bg_yellow);
+                imageDImageView.setBackgroundResource(R.drawable.image_bg);
+                break;
+            case R.id.image_d_imageview:
+                lotteryBgImageView.setBackgroundResource(R.drawable.image_bg);
+                imageBImageView.setBackgroundResource(R.drawable.image_bg);
+                imageCImageView.setBackgroundResource(R.drawable.image_bg);
+                imageDImageView.setBackgroundResource(R.drawable.image_bg_yellow);
+                break;
+        }
     }
 }
 

@@ -36,7 +36,6 @@
         android:layout_marginTop="16dp"
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="16dp"
-        android:onClick="onImageSelected"
         android:padding="16dp"
         android:src="@drawable/lotterybg"
         app:layout_constraintBottom_toTopOf="@id/image_c_imageview"
@@ -46,7 +45,11 @@
         app:layout_constraintTop_toBottomOf="@id/title_edittext"
         app:layout_constraintVertical_bias="0.5"
         android:layout_marginLeft="16dp"
-        android:layout_marginRight="8dp" />
+        android:layout_marginRight="8dp"
+        android:background="@drawable/image_bg_yellow"
+        android:onClick="onImageClick"
+        />
+
 
     <ImageView
         android:id="@+id/image_b_imageview"
@@ -56,7 +59,6 @@
         android:layout_marginTop="16dp"
         android:layout_marginEnd="16dp"
         android:layout_marginBottom="16dp"
-        android:onClick="onImageSelected"
         android:padding="16dp"
         android:src="@drawable/image_b"
         app:layout_constraintBottom_toTopOf="@id/image_d_imageview"
@@ -64,7 +66,10 @@
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@id/lotterybg_imageview"
         app:layout_constraintTop_toBottomOf="@id/title_edittext"
-        app:layout_constraintVertical_bias="0.5" />
+        app:layout_constraintVertical_bias="0.5"
+        android:background="@drawable/image_bg"
+        android:onClick="onImageClick"/>
+
 
     <ImageView
         android:id="@+id/image_c_imageview"
@@ -74,7 +79,6 @@
         android:layout_marginTop="16dp"
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="16dp"
-        android:onClick="onImageSelected"
         android:padding="16dp"
         android:src="@drawable/image_c"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -82,7 +86,10 @@
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/lotterybg_imageview"
-        app:layout_constraintVertical_bias="0.5" />
+        app:layout_constraintVertical_bias="0.5"
+        android:background="@drawable/image_bg"
+        android:onClick="onImageClick"/>
+
 
     <ImageView
         android:id="@+id/image_d_imageview"
@@ -92,7 +99,6 @@
         android:layout_marginTop="16dp"
         android:layout_marginEnd="16dp"
         android:layout_marginBottom="16dp"
-        android:onClick="onImageSelected"
         android:padding="16dp"
         android:src="@drawable/image_d"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -100,7 +106,9 @@
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@id/image_c_imageview"
         app:layout_constraintTop_toBottomOf="@id/image_b_imageview"
-        app:layout_constraintVertical_bias="0.5" />
+        app:layout_constraintVertical_bias="0.5"
+        android:background="@drawable/image_bg"
+        android:onClick="onImageClick"/>
 
 
     <Button
